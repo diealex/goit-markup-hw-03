@@ -1,15 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*styles reset*/
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #ffffff;
 }
 
-.header-one {  
+.header-one {
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
+    max-width: 496px;
 }
 
 .header-two {
@@ -28,18 +65,24 @@ body {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: left;    
+    text-align: left;
+    margin-bottom: 8px;
 }
 
-ul,
-ol {
-    list-style-type: none;
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    
 }
 
-a {
-    text-decoration: none;
+.section {
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
+/*Header slyles*/
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -49,6 +92,7 @@ a {
     letter-spacing: 0.03em;
     text-align: left;
     text-transform: uppercase;
+    margin-right: 76px;
 }
 
 .logo-header{
@@ -59,11 +103,34 @@ a {
     color: #F4F4FD;
 }
 
+.main-header {
+    background-color: #ffffff;;
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link-flex {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+}
+
 .nav-link {
     color: #2E2F42;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
 }
 
 .nav-link:hover, .nav-link:focus  {
@@ -75,24 +142,49 @@ a {
     font-style: normal;
 }
 
+.addr-list-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding-top: 24px;
+}
+
 .addr-link {
     color: #434455;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
 }
 
 .addr-link:hover, .addr-link:focus  {
     color: #404BBF;
 }
 
+/*Oder Service section*/
+
 .section-order-service {
     color: #FFFFFF;
     background-color: #2E2F42;
+    padding: 188px 0;
+}
+
+.order-service-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
 }
 
 button {
     background-color: #4D5AE5;    
     cursor: pointer;
+    /*flex stuff for button*/
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
 }
 
 button:hover, button:focus {
@@ -105,11 +197,15 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.04em;
-text-align: left;
+text-align: center;
+cursor: pointer;
 }
+
+/*Goals section*/
 
 .section-goals {
     background-color: #FFFFFF;
+    padding: 120px 0;
 }
 
 .paragraph {
@@ -119,24 +215,135 @@ text-align: left;
     color: #434455;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.goals-list {
+    display: flex;
+    gap: 24px;
+}
+
+.goals-item {
+    width: calc((100% - 72px) / 4);
+}
+
+
+/*Team section*/
+
+.section-team {
+    background-color: #F4F4FD;
+    display: flex;
+    padding: 120px 0;
+}
+
+.container-ourteam {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-team-title-flex {
+    display: flex;
+    align-self: center;
+    margin-bottom: 72px;
+}
+
+.our-team-card-content-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-team-list-flex {
+    display: flex;
+    align-self: center;
+    gap: 24px;
+}
+
+.our-team-card-content-description {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+}
+
+.our-team-name-flex {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.our-team-paragraph-flex {
+    text-align: center;
+}
+
+.our-team-card-content {
+    background-color: #ffffff;
+    width: Hug (264px) px;
+    height: Hug (380px) px;
+    top: 1248px;
+    left: 1020px;
+    padding: 0px 0px 32px 0px;
+    gap: 32px;
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0px;
+}
+
+/*Section Portfolio*/
+
+.section-portfolio {
+    /*padding-top: 120px;*/
+    padding-bottom: 120px;
+}
+
+.container-portofolio {
+    column-gap: 24px;
+    margin-bottom: 72px;
+}
+
+.portofolio-title-flex {
+    margin-bottom: 72px;
+}
+
+.portofolio-list-flex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portofolio-card-content {
+    width: calc((100% - 48px) / 3);
+}
+
+.portofolio-card-description {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+/*Footer*/
+
 .paragraph-footer {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #F4F4FD;
-}
-
-.section-team {
-    background-color: #F4F4FD;
-}
-
-.team-card {
-    background-color: #FFFFFF;
-}
-.section-portfolio {
-    /*background-color: #E7E9FC;*/
+    max-width: 264px;
 }
 
 .footer  {
     background-color: #2E2F42;
     color: #F4F4FD; 
+    padding: 100px 0;
+}
+
+.footer-logo-flex {
+    display: inline-block;
+    margin-bottom: 16px;
 }
