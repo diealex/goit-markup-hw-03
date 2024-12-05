@@ -259,38 +259,45 @@ cursor: pointer;
     flex-direction: column;
 }
 
+.our-team-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    background-color: #ffffff;
+    width: Hug (264px) px;
+    height: Hug (380px) px;
+    top: 1248px;
+    left: 1020px;
+    /*padding: 0px 0px 32px 0px;
+    gap: 32px;*/
+    border-radius: 0px 0px 4px 4px;
+    opacity: 0px;
+}
+
 .our-team-list-flex {
     display: flex;
     align-self: center;
     gap: 24px;
 }
 
-.our-team-card-content-description {
-    display: flex;
-    flex-direction: column;
-    padding: 32px 0;
-}
-
 .our-team-name-flex {
     text-align: center;
     margin-bottom: 8px;
+    color: #2E2F42;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 .our-team-paragraph-flex {
     text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
-.our-team-card-content {
-    background-color: #ffffff;
-    width: Hug (264px) px;
-    height: Hug (380px) px;
-    top: 1248px;
-    left: 1020px;
-    padding: 0px 0px 32px 0px;
-    gap: 32px;
-    border-radius: 0px 0px 4px 4px;
-    opacity: 0px;
-}
 
 /*Section Portfolio*/
 
